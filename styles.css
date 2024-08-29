@@ -150,5 +150,6 @@ body{
 }
 
 .efeito__botao:hover{
-    color: var(--botao-efeito);
+    background-color: var(--botao-efeito);
+
 }
