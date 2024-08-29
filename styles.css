@@ -10,7 +10,6 @@
 }
 
 body{
-    width: 100%;
     background: var(--cor-de-fundo);
     color:var(--branco-principal);
     font-family: var(--fonte-principal);
@@ -19,8 +18,6 @@ body{
     
 }
 *{
-    width: 100%;
-    height: 100%;
     padding: 0px;
     margin: 0px;
 
