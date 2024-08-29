@@ -3,6 +3,7 @@
     --cinza-secundario: #494949;
     --botao-azul: #167BF7;
     --cor-de-fundo: #00030C;
+    --botao-efeito: purple;
     --fonte-principal: 'inter'
 
 
@@ -149,5 +150,5 @@ body{
 }
 
 .efeito__botao:hover{
-    opacity: 0.5;
+    color: var(--botao-efeito);
 }
