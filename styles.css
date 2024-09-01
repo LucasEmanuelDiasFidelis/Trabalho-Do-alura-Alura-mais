@@ -1,44 +1,46 @@
-:root{
+:root {
     --branco-principal: #FFFFFF;
     --cinza-secundario: #494949;
     --botao-azul: #167BF7;
     --cor-de-fundo: #00030C;
     --botao-efeito: rgb(55, 0, 128);
-    --fonte-principal: 'inter'
-
-
+    --fonte-principal: 'inter';
 }
 
-body{
+body {
     background: var(--cor-de-fundo);
-    color:var(--branco-principal);
+    color: var(--branco-principal);
     font-family: var(--fonte-principal);
     font-size: 16px;
     font-weight: 400;
-    flex-wrap: wrap;
-    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
-*{
-    padding: 0px;
-    margin: 0px;
 
+* {
+    box-sizing: border-box;
 }
-.principal{
+
+.principal {
     background-image: url(img/Background.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    align-items: center;
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    
+    padding: 2em;
 }
 
-.container{
+.container {
     display: grid;
-    grid-template-columns: 50% 50%;
-    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    height: auto;
+    padding: 2em;
 }
 
-.container__botao{
+.container__botao {
     background-color: var(--botao-azul);
     border-radius: 5px;
     padding: 1em;
@@ -46,112 +48,148 @@ body{
     display: block;
     text-decoration: none;
     margin-bottom: 1em;
-}
-.botao_secundario{
-    background-color: transparent;
-    border: 2px solid var(--branco-principal);
+    text-align: center;
+    font-size: 18px;
 }
 
-.container__aviso{
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+    padding: 0.5em 1em;
+    text-align: center;
+    font-size: 18px;
+}
+
+.container__aviso {
     font-size: 12px;
     color: var(--cinza-secundario);
 }
 
-.container__titulo{
+.container__titulo {
     font-size: 28px;
-    font-weight: 700px;
+    font-weight: 700;
 }
 
-.container__imagem{
-    margin: 1em 0 2em 0;
-}
-.container__caixa{
-    margin: 0px 6em;
+.container__imagem {
+    margin: 1em 0 2em;
 }
 
-.secundario__imagem{
+.container__caixa {
+    margin: 0 6em;
+}
+
+.secundario__imagem {
     width: 80%;
 }
-.secundario{
+
+.secundario {
     align-items: center;
-    margin: 0 10em;
+    margin: 0 2em;
 }
-.descrição__titulo{
+
+.descrição__titulo {
     font-weight: 700;
     font-size: 48px;
     color: var(--branco-principal);
-    margin-bottom: 0.1em;
-    
+    margin-bottom: 0.5em;
 }
-.descrição__texto{
+
+.descrição__texto {
     color: var(--cinza-secundario);
 }
 
-.secundario_botao{
+.secundario_botao {
     display: inline-block;
     margin-top: 1em;
 }
-.container__descrição{
+
+.container__descrição {
     padding: 2em;
 }
 
-.dispositivos__lista{
+.dispositivos__lista {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    margin: 5em 0px;
+    margin: 5em 0;
+    flex-wrap: wrap;
 }
+
 .dispositivos {
     text-align: center;
 }
-.dispositivos__titulo{
+
+.dispositivos__titulo {
     font-size: 48px;
     color: var(--branco-principal);
 }
-.lista__item{
+
+.lista__item {
     font-size: 32px;
     color: var(--branco-principal);
 }
 
-.rodape{
-    
+.rodape {
     align-items: center;
     text-align: center;
-
+    padding: 2em;
 }
 
-.imagem__logo{
-    padding: 0em 0px;
+.imagem__logo {
+    padding: 0;
     height: 150px;
-
 }
 
-.lista__link a{
+.lista__link a {
     padding: 0 0.5em 1em;
     color: var(--branco-principal);
     text-decoration: none;
     font-size: 20px;
 }
-.rodape__lista{
+
+.rodape__lista {
     display: flex;
     justify-content: center;
     list-style-type: none;
-
 }
-.rodape__texto{
+
+.rodape__texto {
     margin: 1em 0;
 }
 
-.efeito:hover{
+.efeito:hover {
     opacity: 0.5;
     color: var(--botao-azul);
 }
 
-.lista__link a:active{
+.lista__link a:active {
     color: purple;
 }
 
-.efeito__botao:hover{
+.efeito__botao:hover {
     background-color: var(--botao-efeito);
+}
 
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .secundario {
+        margin: 0 2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .secundario {
+        margin: 0 1em;
+    }
+
+    .lista__item {
+        font-size: 24px;
+    }
 }
